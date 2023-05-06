@@ -7,7 +7,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= BASE_URL. 'Home' ?>">
             <div class="sidebar-brand-icon">
                 <i class="fa fa-adjust"></i>
             </div>
@@ -18,8 +18,8 @@
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+        <li class="nav-item <?php if ($data['title'] == 'Home') : echo 'active'; endif; ?>">
+            <a class="nav-link" href="<?= BASE_URL. 'Home' ?>">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -87,8 +87,8 @@
         </li>
 
         <!-- Nav Item - Tables -->
-        <li class="nav-item">
-            <a class="nav-link" href="tables.html">
+        <li class="nav-item <?php if ($data['title'] == 'Hak Akses') : echo 'active'; endif; ?>">
+            <a class="nav-link" href="<?= BASE_URL. 'HakAkses' ?>">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Hak Akses</span></a>
         </li>
