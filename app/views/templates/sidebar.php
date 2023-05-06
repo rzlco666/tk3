@@ -71,8 +71,8 @@
         </li>
 
         <!-- Nav Item - Charts -->
-        <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+        <li class="nav-item <?php if ($data['title'] == 'Supplier') : echo 'active'; endif; ?>">
+            <a class="nav-link" href="<?= BASE_URL. 'Supplier' ?>">
                 <i class="fas fa-fw fa-address-book"></i>
                 <span>Supplier</span></a>
         </li>
