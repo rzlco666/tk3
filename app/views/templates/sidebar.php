@@ -80,8 +80,8 @@
         <?php if (in_array($data['role'][0]['namaAkses'], ['Administrator'])): ?>
 
         <!-- Nav Item - Charts -->
-        <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+        <li class="nav-item <?php if ($data['title'] == 'Pengguna') : echo 'active'; endif; ?>">
+            <a class="nav-link" href="<?= BASE_URL. 'Pengguna' ?>">
                 <i class="fas fa-fw fa-user-circle"></i>
                 <span>Pengguna</span></a>
         </li>
