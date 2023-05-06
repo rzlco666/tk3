@@ -23,6 +23,7 @@ class Database
             if ($password == $user["password"]) {
                 // set session
                 $_SESSION["login"] = [
+                    'idPengguna' => $user['idPengguna'],
                     'namaPengguna' => $user['namaPengguna'],
                     'namaDepan' => $user['namaDepan'],
                     'namaBelakang' => $user['namaBelakang'],
@@ -51,6 +52,15 @@ class Database
 
     public static function delete($table, $column, $where)
     {
+        /*try {
+            mysqli_query(self::conn(), "DELETE FROM $table WHERE $column = $where");
+        } catch (mysqli_sql_exception $error) {
+            Message::set_message('Data Gagal Di Hapus! Anda Bukan Pembuat Data Ini');
+            header("Location: " . BASE_URL . $redirect);
+            exit();
+            // Menampilkan Pesan Error
+            // throw $error;
+        }*/
         mysqli_query(self::conn(), "DELETE FROM $table WHERE $column = $where");
         return mysqli_affected_rows(self::conn());
     }
@@ -110,7 +120,7 @@ class Database
                 // Menampilkan Pesan Error
                 // throw $error;
             } else {
-                Message::set_message('Data Gagal Di Input!');
+                Message::set_message('Data Gagal Di Input! Anda Bukan Pembuat Data Ini');
                 header("Location: " . BASE_URL . $redirect);
                 exit();
                 // Menampilkan Pesan Error

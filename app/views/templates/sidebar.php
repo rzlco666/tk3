@@ -47,8 +47,8 @@
         </li>
 
         <!-- Nav Item - Tables -->
-        <li class="nav-item">
-            <a class="nav-link" href="tables.html">
+        <li class="nav-item <?php if ($data['title'] == 'Barang') : echo 'active'; endif; ?>">
+            <a class="nav-link" href="<?= BASE_URL. 'Barang' ?>">
                 <i class="fas fa-fw fa-archive"></i>
                 <span>Barang</span></a>
         </li>
