@@ -40,8 +40,8 @@
         </li>
 
         <!-- Nav Item - Tables -->
-        <li class="nav-item">
-            <a class="nav-link" href="tables.html">
+        <li class="nav-item <?php if ($data['title'] == 'Pembelian') : echo 'active'; endif; ?>">
+            <a class="nav-link" href="<?= BASE_URL. 'Pembelian' ?>">
                 <i class="fas fa-fw fa-shopping-basket"></i>
                 <span>Pembelian</span></a>
         </li>
